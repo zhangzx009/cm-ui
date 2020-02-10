@@ -1,0 +1,51 @@
+{
+  "name": "@cm-ui/overlay",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "rabbit_apple <kevin.zhzhang@gmail.com>",
+  "homepage": "https://github.com/715047274/cm-ui#readme",
+  "license": "ISC",
+  "main": "lib/overlay.common.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npm.taobao.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/715047274/cm-ui.git"
+  },
+  "scripts": {
+    "test": "vue-cli-service test:unit",
+    "lib": "vue-cli-service build --target lib --formats commonjs --name overlay --dest ./lib ./src/index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/715047274/cm-ui/issues"
+  },
+  "dependencies": {
+    "@cm-ui/cm-utils": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-optional-chaining": "^7.6.0",
+    "@babel/plugin-syntax-jsx": "^7.2.0",
+    "@babel/plugin-transform-object-assign": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-router": "^4.0.0",
+    "@vue/cli-plugin-unit-jest": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "vue-template-compiler": "^2.5.21",
+    "babel-jest": "^24.8.0"
+  }
+}

@@ -1,0 +1,36 @@
+
+/*default size*/
+/*
+todo:
+   1.create function for left corner,
+   2.right corner
+
+ */
+.folded-corner(@size:1.5em, @angle: 45deg, @background: transparent(100%)) {
+  position: relative;
+  background: @background;
+  /* Fallback */
+  background: linear-gradient(@angle - 180deg, transparent @size, @background 0);
+  border-radius: .5em;
+  /* Alternative */
+  @x: @size / sin(@angle);
+  @y: @size / cos(@angle);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to left bottom,
+    transparent 50%, rgba(0, 0, 0, .2) 0,
+    rgba(0, 0, 0, .4)) 100% 0 no-repeat;
+    width: @y;
+    height: @x;
+    transform: translateY(@y - @x) rotate(2*@angle - 90deg);
+    transform-origin: bottom right;
+    border-bottom-left-radius: inherit;
+    box-shadow: -.2em .2em .3em -.1em rgba(0, 0, 0, .2);
+  }
+}
+
+

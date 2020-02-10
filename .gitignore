@@ -1,0 +1,40 @@
+
+.DS_Store
+
+node_modules
+/dist
+__MACOSX
+
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+/tests/coverage
+/__tests__/__snapshots__/
+/bookMarkGuide
+
+*.snap
+lerna-debug.log
+npm-debug.log
+packages/*/lib
+storybook-static
+
+
+# package lock
+package-lock.json
+yarn.lock

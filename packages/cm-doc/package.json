@@ -1,0 +1,17 @@
+{
+  "name": "@cm-ui/cm-doc",
+  "version": "1.0.0",
+  "description": "cm document template",
+  "main": "./src/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "build": "webpack --progress --config ./build/webpack.config.js",
+    "release": "npm run build && npm publish"
+  },
+  "license": "MIT"
+}

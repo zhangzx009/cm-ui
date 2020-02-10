@@ -1,0 +1,129 @@
+@import "./var";
+
+@keyframes cm-slide-up-enter {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes cm-slide-up-leave {
+  to {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes cm-slide-down-enter {
+  from {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes cm-slide-down-leave {
+  to {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes cm-slide-left-enter {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes cm-slide-left-leave {
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes cm-slide-right-enter {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes cm-slide-right-leave {
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes cm-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cm-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes cm-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cm-fade {
+  &-enter-active {
+    animation: @animation-duration-base cm-fade-in;
+  }
+
+  &-leave-active {
+    animation: @animation-duration-base cm-fade-out;
+  }
+}
+
+.cm-slide-up {
+  &-enter-active {
+    animation: cm-slide-up-enter @animation-duration-base both ease;
+  }
+
+  &-leave-active {
+    animation: cm-slide-up-leave @animation-duration-base both ease;
+  }
+}
+
+.cm-slide-down {
+  &-enter-active {
+    animation: cm-slide-down-enter @animation-duration-base both ease;
+  }
+
+  &-leave-active {
+    animation: cm-slide-down-leave @animation-duration-base both ease;
+  }
+}
+
+.cm-slide-left {
+  &-enter-active {
+    animation: cm-slide-left-enter @animation-duration-base both ease;
+  }
+
+  &-leave-active {
+    animation: cm-slide-left-leave @animation-duration-base both ease;
+  }
+}
+
+.cm-slide-right {
+  &-enter-active {
+    animation: cm-slide-right-enter @animation-duration-base both ease;
+  }
+
+  &-leave-active {
+    animation: cm-slide-right-leave @animation-duration-base both ease;
+  }
+}
